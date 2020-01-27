@@ -1,3 +1,5 @@
+https://fathomless-lake-22722.herokuapp.com/
+
 Rails[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 # rails-api-template
@@ -220,7 +222,7 @@ Response:
 HTTP/1.1 204 No Content
 ```
 
-### Keeping your database up to date 
+### Keeping your database up to date
 
 Remember, creating and applying [migrations](https://edgeguides.rubyonrails.org/active_record_migrations.html#creating-a-migration) are two different things. After you create a migration (one of those files that lives in `db/migrate/`), you need to apply it to each database using `bin/rails db:migrate` (local) or `heroku run rails db:migrate` (production).
 
