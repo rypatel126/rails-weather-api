@@ -3,7 +3,7 @@ class CitiesController < ProtectedController
 
   # GET /cities
   def index
-    @cities = current_user.City.all
+    @cities = current_user.cities.all
 
     render json: @cities
   end
@@ -15,7 +15,7 @@ class CitiesController < ProtectedController
 
   # POST /cities
   def create
-    @city = current_user.City.new(city_params)
+    @city = current_user.cities.build(city_params)
 
     if @city.save
       render json: @city, status: :created, location: @city
@@ -41,7 +41,7 @@ class CitiesController < ProtectedController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_city
-      @city = current_user.City.find(params[:id])
+      @city = current_user.cities.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
